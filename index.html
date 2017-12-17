@@ -371,25 +371,25 @@
 					<div class="row-content1">
 						<h3 class="heading">Skills</h3>
 						<p class="para">Experienced at working in fast-paced environments demanding strong organizational, troubleshooting and technical skills, seeking a position where the above skills will be fully utilized and further developed</p>
-						<div class="chart" data-percent="75" data-bar-color="#35AFBA" data-animate="4000">
+						<div class="chart" data-percent="75" data-bar-color="#33691E" data-animate="4000">
 							<div class="chart-content">
 								<div class="percent"></div>
 								<div class="chart-title">Android</div>
 							</div><!-- chart-content -->
 						</div><!-- chart -->
-						<div class="chart" data-percent="55" data-bar-color="#FF6060" data-animate="2500">
+						<div class="chart" data-percent="80" data-bar-color="#0091EA" data-animate="3000">
+							<div class="chart-content">
+								<div class="percent"></div>
+								<div class="chart-title">Xamarin.forms</div>
+							</div><!-- chart-content -->
+						</div><!-- chart -->
+						<div class="chart" data-percent="55" data-bar-color="#CDDC39" data-animate="2500">
 							<div class="chart-content">
 								<div class="percent"></div>
 								<div class="chart-title">Front-end</div>
 							</div><!-- chart-content -->
 						</div><!-- chart -->
-						<div class="chart" data-percent="40" data-bar-color="#3AD079" data-animate="3000">
-							<div class="chart-content">
-								<div class="percent"></div>
-								<div class="chart-title">Xamarin</div>
-							</div><!-- chart-content -->
-						</div><!-- chart -->
-						<div class="chart" data-percent="60" data-bar-color="#58C0E3" data-animate="3500">
+						<div class="chart" data-percent="60" data-bar-color="#FF1744" data-animate="3500">
 							<div class="chart-content">
 								<div class="percent"></div>
 								<div class="chart-title">Photography</div>
@@ -421,9 +421,9 @@
 									<span class="circle"></span>
 									<div class="experience-img"><img src="images/asset05.jpg" alt=""></div>
 									<div class="experience-info clear-after">
-										<h5>IncubXperts Technoconsulting Pvt Ltd</h5>
+										<h5><font color="04398c">Incub<font color="#fe7400">X</font>perts</font> Technoconsulting Pvt Ltd</h5>
 										<div class="role">Software engineer</div>
-										<p>Aug 2017 – Current (3 months)<br/> Kothrud, Pune</p>
+										<p>Aug 2017 – <font color="#DD2C00">Present</font><br/> Kothrud, Pune</p>
 									</div><!-- experience-info -->
 								</div><!-- experience -->
 								<div class="experience">
@@ -440,7 +440,7 @@
 									<span class="circle"></span>
 									<div class="experience-img"><img src="images/asset02.jpg" alt=""></div>
 									<div class="experience-info clear-after">
-										<h5>Rofr</h5>
+										<h5><font color="#ff204c">Rofr</font></h5>
 										<div class="role">Android Developer</div>
 										<p>Mar 2016 – Aug 2016 (6 months)<br/> Baner, Pune</p>
 									</div><!-- experience-info -->
@@ -543,7 +543,8 @@
 							<div class="clear"> </div>
 						</li> 
 						<div class="send">
-								<a href="#">SEND</a>
+								<!--<a href="#">SEND</a>-->
+                            <input type="button" id="send" name="submit" value="SEND"/>
 						</div>
 					</ul>
                     
@@ -638,6 +639,11 @@
 				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
 			});
 		});
+            
+        $( "#send" ).click(function( event ) {
+  alert( "Handler for .submit() called." );
+  
+});    
 	</script>        
 		 <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
 	 </body>

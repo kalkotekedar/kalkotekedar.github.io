@@ -1,2 +1,1 @@
-# kalkotekedar.github.io
-Resume
+# Kedar Kalkote

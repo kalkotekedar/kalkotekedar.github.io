@@ -9,7 +9,8 @@
       gtag('js', new Date());
 
 	if (navigator.userAgent == "eSim"){
-	    ga('set', 'dimension1', 'Internal User'); //Make sure "dimension1" matches what Google generated. You can change "Internal User" to anything you'd like.
+		var dimensionValue = 'mobileuser';
+		ga('set', 'dimension1', dimensionValue);
 	}
 	    
       gtag('config', 'UA-77282858-2');

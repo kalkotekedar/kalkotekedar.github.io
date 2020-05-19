@@ -7,7 +7,9 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
+	if (navigator.userAgent == "eSim.netAndroidAPP_1.0.0"){
+	    ga('set', 'dimension1', 'Internal User'); //Make sure "dimension1" matches what Google generated. You can change "Internal User" to anything you'd like.
+	}
       gtag('config', 'UA-77282858-2');
     </script>
 

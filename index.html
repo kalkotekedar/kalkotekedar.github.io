@@ -7,13 +7,16 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
-	if (navigator.userAgent == "eSim"){
-		var dimensionValue = 'mobileuser';
-		ga('set', 'dimension1', dimensionValue);
-	}
+      gtag('config', 'UA-77282858-2', {
+	  'custom_map': {'dimension1': 'mobile'}
+	  });
 	    
-      gtag('config', 'UA-77282858-2');
+	// Maps 'dimension2' to 'age'.
+	if (navigator.userAgent == "eSim"){
+		gtag('event', 'custom_agent_event', {'mobile': 'eSim_app'}); 
+	}
+
+	    
     </script>
 
     <link rel="icon" href="images/favicon.png" type="image/png" sizes="16x16">

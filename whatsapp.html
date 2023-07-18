@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Whatsapp</title>
+
+    <style>
+      .div {
+        height: 250px;
+        border: 10px ridge rgb(2, 141, 127);
+      }
+
+      .input {
+        text-align: center;
+      }
+
+      input {
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+
+      #error {
+        display: block;
+        color: red;
+        margin: 5px 0 0 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="div">
+      <center>
+        <h1>Send Whatsapp Message</h1>
+      </center>
+      <div class="input">
+        <input type="tel" placeholder="Phone Number" id="phoneNumber" />
+        <span id="error"></span>
+        <br />
+        <input type="submit" name="Send" onclick="sendMessage()" />
+      </div>
+    </div>
+  </body>
+
+  <script>
+    function sendMessage() {
+      var Number = document
+        .getElementById("phoneNumber")
+        .value;
+
+      if (
+        Object.is(Number, "") ||
+        Object.is(Number, null) ||
+        Object.is(Number, undefined)
+      ) {
+        error.textContent = "Enter valid whatsapp number";
+        return false;
+      }else{
+        error.textContent = "";
+      }
+
+      Number.replace(/\s+/g, "");
+      window.open("https://wa.me/+91" + Number, "_blank");
+    }
+  </script>
+</html>

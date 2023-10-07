@@ -1,63 +1,69 @@
 <html>
-  <head>
-    <title>Whatsapp</title>
 
-    <style>
-      .div {
-        height: 250px;
-        border: 10px ridge rgb(2, 141, 127);
-      }
-
-      .input {
-        text-align: center;
-      }
-
-      input {
-        padding: 5px 10px;
-        border-radius: 5px;
-      }
-
-      #error {
-        display: block;
-        color: red;
-        margin: 5px 0 0 0;
-      }
-    </style>
-  </head>
-
-  <body>
-    <div class="div">
-      <center>
-        <h1>Send Whatsapp Message</h1>
-      </center>
-      <div class="input">
-        <input type="tel" placeholder="Phone Number" id="phoneNumber" />
-        <span id="error"></span>
-        <br />
-        <input type="submit" name="Send" onclick="sendMessage()" />
-      </div>
-    </div>
-  </body>
-
-  <script>
-    function sendMessage() {
-      var Number = document
-        .getElementById("phoneNumber")
-        .value;
-
-      if (
-        Object.is(Number, "") ||
-        Object.is(Number, null) ||
-        Object.is(Number, undefined)
-      ) {
-        error.textContent = "Enter valid whatsapp number";
-        return false;
-      }else{
-        error.textContent = "";
-      }
-
-      Number.replace(/\s+/g, "");
-      window.open("https://wa.me/+91" + Number, "_blank");
+<head>
+  <title>Whatsapp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-adsense-account" content="ca-pub-2356358873712706">
+  <style>
+    .div {
+      height: 250px;
+      border: 10px ridge rgb(2, 141, 127);
     }
-  </script>
+
+    .input {
+      text-align: center;
+    }
+
+    input {
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    #error {
+      display: block;
+      color: red;
+      margin: 5px 0 0 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="div">
+    <center>
+      <h1>Send Whatsapp Message</h1>
+    </center>
+    <div class="input">
+      <input type="tel" placeholder="Phone Number" id="phoneNumber" />
+      <span id="error"></span>
+      <br />
+      <input type="submit" name="Send" onclick="sendMessage()" />
+    </div>
+  </div>
+</body>
+
+<script>
+  function sendMessage() {
+    var Number = document
+      .getElementById("phoneNumber")
+      .value;
+
+    if (
+      Object.is(Number, "") ||
+      Object.is(Number, null) ||
+      Object.is(Number, undefined)
+    ) {
+      error.textContent = "Enter valid whatsapp number";
+      return false;
+    } else {
+      error.textContent = "";
+    }
+    Number = Number.replace(/\s+/g, "").split(" ").join("");
+    if (!Number.startsWith("+91")) {
+      Number = "+91" + Number;
+    }
+
+    window.open("https://wa.me/" + Number, "_blank");
+  }
+</script>
+
 </html>
